@@ -1,6 +1,8 @@
 #ifndef SIMPLE_MORSE_DECODER_ENCODER_MORSE_H 
 #define SIMPLE_MORSE_DECODER_ENCODER_MORSE_H
 
+#include <string.h>
+
 // Morse,
 struct morse_code {
 	char *m_text;
@@ -43,7 +45,7 @@ static const struct morse_code morse_codes[MORSE_CODES_LEN] =
 		// TODO - All the numbers and special characters.
 };
 
-static inline struct morse_code get_code(const char *search,
+static inline struct morse_code *get_code(const char *search,
 										 int is_decode)
 {
 	for (int code = 0; code < MORSE_CODES_LEN; code++)
@@ -51,16 +53,16 @@ static inline struct morse_code get_code(const char *search,
 		if (is_decode)
 		{
 			if (strcmp(morse_codes[code].m_code, search))
-				return code;
+				return (struct morse_code *) &morse_codes[code];
 		}
 		else 
 		{
 			if (strcmp(morse_codes[code].m_text, search))
-				return code;
+				return (struct morse_code *) &morse_codes[code];
 		}
 	}
 
-	return -1;
+	return NULL;
 }
 
 
