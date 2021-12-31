@@ -10,11 +10,12 @@ struct morse_code {
 };
 
 // Define all the morse texts and codes.
-#define MORSE_CODES_LEN 53
+#define MORSE_CODES_LEN 28
+// Real 53
 
 static const struct morse_code morse_codes[MORSE_CODES_LEN] =
 {
-		{.m_text = "A", .m_code = "..-"  },
+		{.m_text = "A", .m_code = ".-"   },
 		{.m_text = "B", .m_code = "-..." },
 		{.m_text = "C", .m_code = "-.-." },
 		{.m_text = "D", .m_code = "-.."  },
