@@ -11,7 +11,7 @@ struct morse_code {
 };
 
 // Define all the morse texts and codes.
-#define MORSE_CODES_LEN 28
+#define MORSE_CODES_LEN 37
 // Real 53
 
 static const struct morse_code morse_codes[MORSE_CODES_LEN] =
@@ -42,8 +42,17 @@ static const struct morse_code morse_codes[MORSE_CODES_LEN] =
 		{.m_text = "X", .m_code = "-..-" },
 		{.m_text = "Y", .m_code = "-.--" },
 		{.m_text = "Z", .m_code = "--.." },
-		{.m_text = "0", .m_code = ".----"},
-		{.m_text = "1", .m_code = "..---"}
+		{.m_text = "0", .m_code = "-----"},
+		{.m_text = "1", .m_code = ".----"},
+		{.m_text = "2", .m_code = "..---"},
+		{.m_text = "3", .m_code = "...--"},
+		{.m_text = "4", .m_code = "....-"},
+		{.m_text = "5", .m_code = "....."},
+		{.m_text = "6", .m_code = "-...."},
+		{.m_text = "7", .m_code = "--..."},
+		{.m_text = "8", .m_code = "---.."},
+		{.m_text = "9", .m_code = "----."},
+		{.m_code = "/", .m_code = "-..-."},
 		// TODO - All the numbers and special characters.
 };
 
