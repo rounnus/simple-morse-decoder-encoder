@@ -1,3 +1,5 @@
+[![simple_morse_decoder_encoder build](https://github.com/rounnus/simple_morse_decoder_encoder/actions/workflows/cmake.yml/badge.svg?branch=main&event=push)](https://github.com/rounnus/simple_morse_decoder_encoder/actions/workflows/cmake.yml)
+
 # simple_morse_decoder_encoder
 This is a simple example of a program that takes as an input morse code and gives text on output or takes as an input text and give on output morse code. It works based on the international morse code.
 
