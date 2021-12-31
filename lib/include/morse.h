@@ -45,19 +45,19 @@ static const struct morse_code morse_codes[MORSE_CODES_LEN] =
 		// TODO - All the numbers and special characters.
 };
 
-static inline struct morse_code *get_code(const char *search,
-										 int is_decode)
+static inline struct morse_code *get_morse_code(const char *search,
+												int is_decode)
 {
 	for (int code = 0; code < MORSE_CODES_LEN; code++)
 	{
 		if (is_decode)
 		{
-			if (strcmp(morse_codes[code].m_code, search))
+			if (!strcmp(morse_codes[code].m_code, search))
 				return (struct morse_code *) &morse_codes[code];
 		}
 		else 
 		{
-			if (strcmp(morse_codes[code].m_text, search))
+			if (!strcmp(morse_codes[code].m_text, search))
 				return (struct morse_code *) &morse_codes[code];
 		}
 	}
