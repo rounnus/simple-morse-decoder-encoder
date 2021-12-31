@@ -16,6 +16,9 @@ void encode_morse(const char *ascii_text)
 	for (int ch = 0; ch < strlen(ascii_text); ch++)
 	{
 		tmp[0] = ascii_text[ch];
+		if ( ((int) tmp[0]) >= 97)
+		   tmp[0] = (char) (((int)tmp[0]) - 32); // Capitalize the current letter.	
+
 		curr_morse_code = get_morse_code(tmp, 0x0);
 		if (curr_morse_code == NULL)
 		{
@@ -25,5 +28,5 @@ void encode_morse(const char *ascii_text)
 		// Print the morse of the current character.
 		printf("%s ", curr_morse_code->m_code);
 	}
-	printf("'\n");
+	printf(" '\n");
 }

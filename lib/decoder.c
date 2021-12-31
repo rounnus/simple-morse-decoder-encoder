@@ -16,18 +16,18 @@ void decode_morse(const char *morse_seq)
 	struct morse_code *curr_morse_code = NULL;
 
 	while (curr_morse_seq)
-	{
+	{	
 		curr_morse_code = get_morse_code(curr_morse_seq, 0x1);
 		if (curr_morse_code == NULL)
 		{
-			printf("\nFailed to decode the input sequence.");
+			printf("\nFailed to decode the input sequence.\n");
 			exit(0);
 		}
 		// Print the decoded character.
 		printf("%s", curr_morse_code->m_text);
-
+		
 		curr_morse_seq = strtok(NULL, " ");	
 	}
 
-	printf("'\n");
+	printf(" '\n");
 }

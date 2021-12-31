@@ -2,6 +2,7 @@
 #define SIMPLE_MORSE_DECODER_ENCODER_MORSE_H
 
 #include <string.h>
+#include <stdio.h>
 
 // Morse,
 struct morse_code {
@@ -46,6 +47,15 @@ static const struct morse_code morse_codes[MORSE_CODES_LEN] =
 		// TODO - All the numbers and special characters.
 };
 
+/**
+ *	Search for the morse sequence or for the character
+ *	that represent by a sequence.
+ *	@param search The morse sequence or the text.
+ *	@param is_decode Choice if the operation is decode or encode.
+ *	@return A pointer to the coresponded morse code struct witch
+ *	cointains the informations about the current morse sequence
+ *	and the character that is equal to.
+ */
 static inline struct morse_code *get_morse_code(const char *search,
 												int is_decode)
 {
