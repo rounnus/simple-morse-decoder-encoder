@@ -3,6 +3,12 @@
 # simple_morse_decoder_encoder
 This is a simple example of a program that takes as an input morse code and gives text on output or takes as an input text and give on output morse code. It works based on the international morse code.
 
+# Installation requirements
+The following packages must be installed.<br>
+```
+sudo apt-get install build-essential cmake git gcc
+```
+
 # Download & Build
 
 First download the program from GitHub and go to the simple_morse_decoder_encoder.
